@@ -1,0 +1,18 @@
+body {
+    font-family: Arial;
+    background: #f4f6f8;
+}
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0 0 10px #ccc;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+button {
+    padding: 8px;
+}

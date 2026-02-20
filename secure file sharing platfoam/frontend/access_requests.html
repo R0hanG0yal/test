@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<h2>Access Requests</h2>
+{% for r in requests %}
+<div class="card">
+<p>{{ r.email }} wants {{ r.filename }}</p>
+<form method="post">
+<input type="hidden" name="id" value="{{ r.id }}">
+<button name="status" value="approved">Approve</button>
+<button name="status" value="denied">Deny</button>
+</form>
+</div>
+{% endfor %}
+</body>
+</html>

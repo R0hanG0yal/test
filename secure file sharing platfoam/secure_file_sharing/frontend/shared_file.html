@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card share-container">
+    <div class="share-icon">📁</div>
+    <h2>{{ file.original_name }}</h2>
+    <p style="color:var(--text-muted); margin-bottom: 2rem;">This file has been securely shared with you.</p>
+
+    <form method="POST">
+        <p style="text-align:left; font-size:0.9rem; margin-bottom:0.5rem;">Enter your email to access or request
+            download:</p>
+        <div class="form-group" style="display:flex; gap:0.5rem;">
+            <input type="email" name="email" required placeholder="your.email@example.com" style="flex:1;">
+            <button type="submit" class="btn btn-primary">Continue</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

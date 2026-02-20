@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<h2>Your Files</h2>
+<a href="/upload">Upload</a> | <a href="/access_requests">Access Requests</a> | <a href="/logout">Logout</a>
+<div class="grid">
+{% for f in files %}
+<div class="card">
+<p>{{ f.filename }}</p>
+<form action="/share/{{ f.id }}" method="post">
+<input name="hours" value="1">
+<label><input type="checkbox" name="one_time"> One-time</label>
+<button>Share</button>
+</form>
+</div>
+{% endfor %}
+</div>
+</body>
+</html>
